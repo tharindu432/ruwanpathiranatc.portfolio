@@ -14,7 +14,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+     "deploy": "gh-pages -d dist --repo=https://github.com/tharindu432/ruwanpathiranatc.portfolio.git"
   },
   "dependencies": {
     "framer-motion": "^12.4.5",
