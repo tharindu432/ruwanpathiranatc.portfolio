@@ -1,6 +1,10 @@
 {
   "name": "ruwanpathiranatc",
   "homepage": "https://github.com/tharindu432/ruwanpathiranatc.portfolio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tharindu432/ruwanpathiranatc.portfolio.git"
+  },
   "private": true,
   "version": "0.0.0",
   "type": "module",
