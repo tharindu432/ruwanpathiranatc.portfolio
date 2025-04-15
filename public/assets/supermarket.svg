@@ -1,0 +1,44 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa" rx="10" ry="10"/>
+  
+  <!-- Header -->
+  <rect x="50" y="40" width="700" height="80" rx="8" ry="8" fill="#6db33f"/>
+  <text x="400" y="90" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="white">Supermarket Application</text>
+  
+  <!-- Main Content Area -->
+  <rect x="100" y="150" width="600" height="300" rx="8" ry="8" fill="#e9ecef" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Feature Circles -->
+  <circle cx="250" cy="225" r="60" fill="#6db33f" fill-opacity="0.7"/>
+  <circle cx="550" cy="225" r="60" fill="#00758f" fill-opacity="0.7"/>
+  <circle cx="250" cy="375" r="60" fill="#00758f" fill-opacity="0.7"/>
+  <circle cx="550" cy="375" r="60" fill="#6db33f" fill-opacity="0.7"/>
+  
+  <!-- Feature Icons -->
+  <text x="250" y="235" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="white">👤</text>
+  <text x="550" y="235" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="white">📦</text>
+  <text x="250" y="385" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="white">🛒</text>
+  <text x="550" y="385" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="white">📊</text>
+  
+  <!-- Feature Labels -->
+  <text x="250" y="280" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#343a40">User Management</text>
+  <text x="550" y="280" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#343a40">Product Management</text>
+  <text x="250" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#343a40">Order Management</text>
+  <text x="550" y="430" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#343a40">Inventory Management</text>
+  
+  <!-- Connecting Lines -->
+  <line x1="310" y1="225" x2="490" y2="225" stroke="#343a40" stroke-width="2"/>
+  <line x1="310" y1="375" x2="490" y2="375" stroke="#343a40" stroke-width="2"/>
+  <line x1="250" y1="285" x2="250" y2="315" stroke="#343a40" stroke-width="2"/>
+  <line x1="550" y1="285" x2="550" y2="315" stroke="#343a40" stroke-width="2"/>
+  
+  <!-- Vertical Connection -->
+  <line x1="250" y1="315" x2="550" y2="315" stroke="#343a40" stroke-width="2"/>
+  
+  <!-- Decorative Elements -->
+  <circle cx="70" cy="70" r="15" fill="#6db33f" fill-opacity="0.3"/>
+  <circle cx="730" cy="430" r="25" fill="#00758f" fill-opacity="0.2"/>
+  <circle cx="680" cy="80" r="10" fill="#00758f" fill-opacity="0.4"/>
+  <circle cx="120" cy="430" r="20" fill="#6db33f" fill-opacity="0.3"/>
+</svg>
