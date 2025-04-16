@@ -10,4 +10,7 @@ export default defineConfig({
 
   ],
   base: '/ruwanpathiranatc.portfolio/',
+  build: {
+    outDir: 'dist',
+  },
 })

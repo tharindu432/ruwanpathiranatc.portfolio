@@ -46,7 +46,7 @@ export default function Navbar() {
         />
 
         <ul className="hidden lg:flex items-center gap-x-7 font-semibold">
-          {["about", "skills", "projects", "contact"].map((section) => (
+          {["about", "skills", "experience", "projects", "contact"].map((section) => (
             <motion.li
               key={section}
               className="group"
@@ -64,7 +64,8 @@ export default function Navbar() {
         </ul>
 
         <motion.a
-          href=""
+          href="/assets/Tharindu Ruwanpathirana_SE.pdf"
+          target="_blank"
           className="hidden relative lg:inline-block px-4 py-2 font-medium group"
         >
           <span className="absolute inset-0 w-full h-full transition duration-200 ease-out transform translate-x-1 translate-y-1 bg-black group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
@@ -100,7 +101,7 @@ export default function Navbar() {
               <HiX />
             </button>
             <ul className="flex flex-col items-start ml-16 mt-28 h-full gap-y-6 font-semibold">
-              {["about", "skills", "projects", "contact"].map((section) => (
+              {["about", "skills", "experience", "projects", "contact"].map((section) => (
                 <motion.li
                   key={section}
                   className="border-b"
