@@ -31,14 +31,22 @@ export default function Home() {
             }}
           >
             <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
-              Hello,{" "}
-              <TypeAnimation
-                sequence={["I am Tharindu Ruwanpathirana", 1000]}
-                speed={10}
-                style={{ fontWeight: 600 }}
-                repeat={Infinity}
-              />
+              Hello,
+              <div className="block">
+                <TypeAnimation
+                  sequence={[
+                    "I am Tharindu",
+                    1000,
+                    "I am Ruwanpathirana",
+                    1000,
+                  ]}
+                  speed={10}
+                  style={{ fontWeight: 600, display: "block" }}
+                  repeat={Infinity}
+                />
+              </div>
             </motion.h2>
+
             <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
               <span className="font-extrabold">Software</span>{" "}
               <span
@@ -48,6 +56,7 @@ export default function Home() {
                 Engineer
               </span>
             </motion.h2>
+
             <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
               Based In <span className="font-extrabold">Sri Lanka.</span>
             </motion.h2>
@@ -100,7 +109,7 @@ export default function Home() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          {/* Floating icons */}
+          {/* Floating Tech Logos */}
           {[
             {
               src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
@@ -144,6 +153,18 @@ export default function Home() {
               style: { bottom: "10%", right: "5%" },
               float: [0, 15, 0],
             },
+            {
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+              alt: "MySQL",
+              style: { top: "35%", right: "5%" },
+              float: [0, 12, 0],
+            },
+            {
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+              alt: "MongoDB",
+              style: { bottom: "35%", left: "5%" },
+              float: [0, -12, 0],
+            },
           ].map((icon, index) => (
             <motion.img
               key={index}
@@ -169,7 +190,6 @@ export default function Home() {
             <p className="text-gray-400">✔ Compiled successfully!</p>
           </motion.div>
         </motion.div>
-
       </div>
     </div>
   );
