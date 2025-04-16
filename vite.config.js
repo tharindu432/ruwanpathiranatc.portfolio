@@ -9,7 +9,7 @@ export default defineConfig({
     react()
 
   ],
-  base: '/ruwanpathiranatc.portfolio/',
+  //base: '/ruwanpathiranatc.portfolio/',
   build: {
     outDir: 'dist',
   },
