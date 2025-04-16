@@ -7,18 +7,18 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   return (
-    <div className="mt-20" id="home">
-      <div className="flex justify-between py-10 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse">
+    <div className="mt-10 md:mt-20 px-4 sm:px-6 lg:px-28" id="home">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 py-10">
 
+        {/* Text Content */}
         <motion.div
-          className="lg:w-[45%]"
+          className="w-full lg:w-1/2"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
-
           <motion.div
-            className="text-2xl lg:text-5xl flex flex-col mt-8 lg:mt-0 gap-2 lg:gap-5 text-nowrap"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl flex flex-col gap-3 lg:gap-5 break-words"
             initial="hidden"
             animate="visible"
             variants={{
@@ -31,14 +31,12 @@ export default function Home() {
             }}
           >
             <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
-              Hello, <TypeAnimation
-                sequence={[
-                  'I am Tharindu Ruwanpathirana',
-                  1000,
-                ]}
-                speed={10}
-                style={{ fontWeight:600 }}
+              Hello,&nbsp;
+              <TypeAnimation
+                sequence={["I am Tharindu Ruwanpathirana", 2000]}
+                speed={20}
                 repeat={Infinity}
+                style={{ fontWeight: 600 }}
               />
             </motion.h2>
             <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
@@ -56,7 +54,7 @@ export default function Home() {
           </motion.div>
 
           <motion.p
-            className="text-[#71717A] text-sm lg:text-base mt-5"
+            className="text-[#71717A] text-sm sm:text-base mt-5 leading-relaxed"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
@@ -67,8 +65,9 @@ export default function Home() {
             player.
           </motion.p>
 
+          {/* Social Icons */}
           <motion.div
-            className="flex items-center gap-x-5 mt-10 lg:mt-14"
+            className="flex flex-wrap items-center gap-4 mt-8 lg:mt-10"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
@@ -85,27 +84,28 @@ export default function Home() {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white p-2 lg:p-3 rounded border-2 border-black"
-                whileHover={{ scale: 1.1, backgroundColor: "#000", color: "#fff" }}
-                whileTap={{ scale: 0.9 }}
+                className="bg-white p-2 rounded-full border-2 border-black hover:bg-black hover:text-white transition-all"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <Icon className="w-4 h-4 lg:w-5 lg:h-5" />
+                <Icon className="w-5 h-5" />
               </motion.a>
             ))}
           </motion.div>
         </motion.div>
 
+        {/* Image */}
         <motion.div
-          className="lg:w-[55%] w-full flex justify-center"
+          className="w-full lg:w-1/2 flex justify-center"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <img
-  className="w-60 sm:w-72 md:w-80 lg:w-[90%] xl:w-[95%] h-auto max-h-[450px] lg:max-h-[550px] object-contain"
-  src="/assets/hero-vector.svg"
-  alt="Hero Vector"
-/>
+            className="w-48 sm:w-60 md:w-72 lg:w-4/5 h-auto max-h-[450px] lg:max-h-[550px] object-contain"
+            src="/assets/hero-vector.svg"
+            alt="Hero Vector"
+          />
         </motion.div>
       </div>
     </div>
