@@ -8,17 +8,17 @@ import { TypeAnimation } from "react-type-animation";
 export default function Home() {
   return (
     <div className="mt-20" id="home">
-      <div className="flex justify-between py-10 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse">
+      <div className="flex flex-col-reverse lg:flex-row justify-between items-center px-5 sm:px-10 lg:px-28 py-10 gap-10">
 
         {/* Left Content */}
         <motion.div
-          className="lg:w-[45%]"
+          className="w-full lg:w-[50%]"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <motion.div
-            className="text-2xl lg:text-5xl flex flex-col mt-8 lg:mt-0 gap-2 lg:gap-5 text-nowrap"
+            className="text-2xl sm:text-3xl lg:text-5xl flex flex-col gap-2 sm:gap-3 lg:gap-5 text-nowrap"
             initial="hidden"
             animate="visible"
             variants={{
@@ -31,13 +31,11 @@ export default function Home() {
             }}
           >
             <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
-              Hello, <TypeAnimation
-                sequence={[
-                  'I am Tharindu Ruwanpathirana',
-                  1000,
-                ]}
+              Hello,{" "}
+              <TypeAnimation
+                sequence={["I am Tharindu Ruwanpathirana", 1000]}
                 speed={10}
-                style={{ fontWeight:600 }}
+                style={{ fontWeight: 600 }}
                 repeat={Infinity}
               />
             </motion.h2>
@@ -56,7 +54,7 @@ export default function Home() {
           </motion.div>
 
           <motion.p
-            className="text-[#71717A] text-sm lg:text-base mt-5"
+            className="text-[#71717A] text-sm sm:text-base mt-5"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
@@ -68,7 +66,7 @@ export default function Home() {
           </motion.p>
 
           <motion.div
-            className="flex items-center gap-x-5 mt-10 lg:mt-14"
+            className="flex items-center flex-wrap gap-4 mt-8 sm:mt-10"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
@@ -85,40 +83,41 @@ export default function Home() {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white p-2 lg:p-3 rounded border-2 border-black"
+                className="bg-white p-2 sm:p-3 rounded border-2 border-black"
                 whileHover={{ scale: 1.1, backgroundColor: "#000", color: "#fff" }}
                 whileTap={{ scale: 0.9 }}
               >
-                <Icon className="w-4 h-4 lg:w-5 lg:h-5" />
+                <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
               </motion.a>
             ))}
           </motion.div>
         </motion.div>
 
-        {/* Right Animation - Developer Themed */}
+        {/* Right Animation */}
         <motion.div
-          className="lg:w-[55%] w-full flex justify-center items-center relative h-[300px] sm:h-[400px] lg:h-[500px]"
+          className="w-full lg:w-[50%] relative flex items-center justify-center h-[300px] sm:h-[400px] lg:h-[500px]"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
+          {/* Floating icons */}
           {[
             {
               src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
               alt: "Java",
-              style: { top: "10%", left: "20%" },
+              style: { top: "10%", left: "10%" },
               float: [0, -20, 0],
             },
             {
               src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
               alt: "JavaScript",
-              style: { top: "20%", right: "20%" },
+              style: { top: "15%", right: "15%" },
               float: [0, 15, 0],
             },
             {
               src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
               alt: "React",
-              style: { bottom: "15%", left: "20%" },
+              style: { bottom: "15%", left: "5%" },
               float: [0, 20, 0],
             },
             {
@@ -130,7 +129,7 @@ export default function Home() {
             {
               src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
               alt: "Node.js",
-              style: { bottom: "20%", right: "25%" },
+              style: { bottom: "15%", right: "10%" },
               float: [0, 20, 0],
             },
             {
@@ -142,7 +141,7 @@ export default function Home() {
             {
               src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
               alt: "Docker",
-              style: { bottom: "10%", right: "10%" },
+              style: { bottom: "10%", right: "5%" },
               float: [0, 15, 0],
             },
           ].map((icon, index) => (
@@ -150,16 +149,16 @@ export default function Home() {
               key={index}
               src={icon.src}
               alt={icon.alt}
-              className="w-12 h-12 grayscale contrast-200 drop-shadow-xl"
+              className="w-10 h-10 sm:w-12 sm:h-12 grayscale contrast-200 drop-shadow-xl"
               style={{ position: "absolute", ...icon.style }}
               animate={{ y: icon.float }}
               transition={{ duration: 4 + index, repeat: Infinity, ease: "easeInOut" }}
             />
           ))}
 
-          {/* Center Terminal Box */}
+          {/* Terminal Box */}
           <motion.div
-            className="bg-black text-white border border-white shadow-xl p-4 rounded-md max-w-xs w-full text-sm font-mono z-10"
+            className="bg-black text-white border border-white shadow-xl p-3 sm:p-4 rounded-md w-64 sm:w-80 text-xs sm:text-sm font-mono z-10"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5, duration: 1 }}
