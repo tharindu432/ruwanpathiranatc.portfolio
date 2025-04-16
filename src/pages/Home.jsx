@@ -18,7 +18,7 @@ export default function Home() {
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <motion.div
-            className="text-2xl sm:text-3xl lg:text-5xl flex flex-col gap-2 sm:gap-3 lg:gap-5 text-nowrap"
+            className="text-2xl sm:text-3xl lg:text-5xl flex flex-col gap-2 sm:gap-3 lg:gap-5"
             initial="hidden"
             animate="visible"
             variants={{
@@ -35,13 +35,11 @@ export default function Home() {
               <div className="block">
                 <TypeAnimation
                   sequence={[
-                    "I am Tharindu",
-                    1000,
-                    "I am Ruwanpathirana",
-                    1000,
+                    "I am Tharindu", 1000,
+                    "I am Ruwanpathirana", 1000
                   ]}
                   speed={10}
-                  style={{ fontWeight: 600, display: "block" }}
+                  style={{ fontWeight: 600, display: "block", whiteSpace: "pre-line" }}
                   repeat={Infinity}
                 />
               </div>
@@ -111,60 +109,15 @@ export default function Home() {
         >
           {/* Floating Tech Logos */}
           {[
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-              alt: "Java",
-              style: { top: "10%", left: "10%" },
-              float: [0, -20, 0],
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-              alt: "JavaScript",
-              style: { top: "15%", right: "15%" },
-              float: [0, 15, 0],
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-              alt: "React",
-              style: { bottom: "15%", left: "5%" },
-              float: [0, 20, 0],
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-              alt: "Next.js",
-              style: { top: "50%", left: "50%", transform: "translate(-50%, -50%)" },
-              float: [0, -15, 0],
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-              alt: "Node.js",
-              style: { bottom: "15%", right: "10%" },
-              float: [0, 20, 0],
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
-              alt: "Spring Boot",
-              style: { top: "65%", left: "10%" },
-              float: [0, -15, 0],
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
-              alt: "Docker",
-              style: { bottom: "10%", right: "5%" },
-              float: [0, 15, 0],
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-              alt: "MySQL",
-              style: { top: "35%", right: "5%" },
-              float: [0, 12, 0],
-            },
-            {
-              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-              alt: "MongoDB",
-              style: { bottom: "35%", left: "5%" },
-              float: [0, -12, 0],
-            },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", alt: "Java", style: { top: "10%", left: "10%" }, float: [0, -20, 0] },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", alt: "JavaScript", style: { top: "15%", right: "15%" }, float: [0, 15, 0] },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg", alt: "React", style: { bottom: "15%", left: "5%" }, float: [0, 20, 0] },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg", alt: "Next.js", style: { top: "50%", left: "50%", transform: "translate(-50%, -50%)" }, float: [0, -15, 0] },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg", alt: "Node.js", style: { bottom: "15%", right: "10%" }, float: [0, 20, 0] },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg", alt: "Spring Boot", style: { top: "65%", left: "10%" }, float: [0, -15, 0] },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg", alt: "Docker", style: { bottom: "10%", right: "5%" }, float: [0, 15, 0] },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg", alt: "MySQL", style: { top: "35%", right: "5%" }, float: [0, 12, 0] },
+            { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", alt: "MongoDB", style: { bottom: "35%", left: "5%" }, float: [0, -12, 0] },
           ].map((icon, index) => (
             <motion.img
               key={index}
