@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
@@ -10,42 +11,28 @@ export default function Home() {
     <div className="mt-20" id="home">
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center px-5 sm:px-10 lg:px-28 py-10 gap-10">
 
-        {/* Left Content */}
+        {/* Left Side */}
         <motion.div
           className="w-full lg:w-[50%]"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 1 }}
         >
-          <motion.div
-            className="text-2xl sm:text-3xl lg:text-5xl flex flex-col gap-2 sm:gap-3 lg:gap-5"
-            initial="hidden"
-            animate="visible"
-            variants={{
-              hidden: { opacity: 0, y: 20 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: { staggerChildren: 0.2, ease: "easeInOut" },
-              },
-            }}
-          >
-            <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
-              Hello,
-              <div className="block">
-                <TypeAnimation
-                  sequence={[
-                    "I am Tharindu", 1000,
-                    "I am Ruwanpathirana", 1000
-                  ]}
-                  speed={10}
-                  style={{ fontWeight: 600, display: "block", whiteSpace: "pre-line" }}
-                  repeat={Infinity}
-                />
-              </div>
+          <div className="text-2xl sm:text-3xl lg:text-5xl flex flex-col gap-2 sm:gap-3 lg:gap-5">
+            <motion.h2>
+              <TypeAnimation
+                sequence={[
+                  "I am Tharindu\nRuwanpathirana", // Line break
+                  2000
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+                className="font-semibold whitespace-pre-line block"
+              />
             </motion.h2>
 
-            <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
+            <motion.h2>
               <span className="font-extrabold">Software</span>{" "}
               <span
                 className="text-white font-extrabold"
@@ -55,16 +42,16 @@ export default function Home() {
               </span>
             </motion.h2>
 
-            <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
+            <motion.h2>
               Based In <span className="font-extrabold">Sri Lanka.</span>
             </motion.h2>
-          </motion.div>
+          </div>
 
           <motion.p
             className="text-[#71717A] text-sm sm:text-base mt-5"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
+            transition={{ delay: 0.5 }}
           >
             Focused and highly motivated Software Engineer with industrial
             experience in Full stack software development. I’m capable of
@@ -76,7 +63,7 @@ export default function Home() {
             className="flex items-center flex-wrap gap-4 mt-8 sm:mt-10"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 1 }}
+            transition={{ delay: 0.8 }}
           >
             {[
               { Icon: BiLogoGmail, link: "mailto:ruwanpathiranatc@gmail.com" },
@@ -100,14 +87,13 @@ export default function Home() {
           </motion.div>
         </motion.div>
 
-        {/* Right Animation */}
+        {/* Right Side */}
         <motion.div
           className="w-full lg:w-[50%] relative flex items-center justify-center h-[300px] sm:h-[400px] lg:h-[500px]"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          {/* Floating Tech Logos */}
           {[
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg", alt: "Java", style: { top: "10%", left: "10%" }, float: [0, -20, 0] },
             { src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg", alt: "JavaScript", style: { top: "15%", right: "15%" }, float: [0, 15, 0] },
