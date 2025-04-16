@@ -7,18 +7,18 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   return (
-    <div className="mt-10 md:mt-20 px-4 sm:px-6 lg:px-28" id="home">
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-10 py-10">
+    <div className="mt-20" id="home">
+      <div className="flex justify-between py-10 items-center px-5 lg:px-28 lg:flex-row flex-col-reverse">
 
-        {/* Text Content */}
+        {/* Left Content */}
         <motion.div
-          className="w-full lg:w-1/2"
+          className="lg:w-[45%]"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           <motion.div
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl flex flex-col gap-3 lg:gap-5 break-words"
+            className="text-2xl lg:text-5xl flex flex-col mt-8 lg:mt-0 gap-2 lg:gap-5 text-nowrap"
             initial="hidden"
             animate="visible"
             variants={{
@@ -31,12 +31,14 @@ export default function Home() {
             }}
           >
             <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
-              Hello,&nbsp;
-              <TypeAnimation
-                sequence={["I am Tharindu Ruwanpathirana", 2000]}
-                speed={20}
+              Hello, <TypeAnimation
+                sequence={[
+                  'I am Tharindu Ruwanpathirana',
+                  1000,
+                ]}
+                speed={10}
+                style={{ fontWeight:600 }}
                 repeat={Infinity}
-                style={{ fontWeight: 600 }}
               />
             </motion.h2>
             <motion.h2 variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}>
@@ -54,7 +56,7 @@ export default function Home() {
           </motion.div>
 
           <motion.p
-            className="text-[#71717A] text-sm sm:text-base mt-5 leading-relaxed"
+            className="text-[#71717A] text-sm lg:text-base mt-5"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
@@ -65,9 +67,8 @@ export default function Home() {
             player.
           </motion.p>
 
-          {/* Social Icons */}
           <motion.div
-            className="flex flex-wrap items-center gap-4 mt-8 lg:mt-10"
+            className="flex items-center gap-x-5 mt-10 lg:mt-14"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 1 }}
@@ -84,29 +85,92 @@ export default function Home() {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white p-2 rounded-full border-2 border-black hover:bg-black hover:text-white transition-all"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
+                className="bg-white p-2 lg:p-3 rounded border-2 border-black"
+                whileHover={{ scale: 1.1, backgroundColor: "#000", color: "#fff" }}
+                whileTap={{ scale: 0.9 }}
               >
-                <Icon className="w-5 h-5" />
+                <Icon className="w-4 h-4 lg:w-5 lg:h-5" />
               </motion.a>
             ))}
           </motion.div>
         </motion.div>
 
-        {/* Image */}
+        {/* Right Animation - Developer Themed */}
         <motion.div
-          className="w-full lg:w-1/2 flex justify-center"
+          className="lg:w-[55%] w-full flex justify-center items-center relative h-[300px] sm:h-[400px] lg:h-[500px]"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
+          transition={{ duration: 1 }}
         >
-          <img
-            className="w-48 sm:w-60 md:w-72 lg:w-4/5 h-auto max-h-[450px] lg:max-h-[550px] object-contain"
-            src="/assets/hero-vector.svg"
-            alt="Hero Vector"
-          />
+          {[
+            {
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+              alt: "Java",
+              style: { top: "10%", left: "20%" },
+              float: [0, -20, 0],
+            },
+            {
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+              alt: "JavaScript",
+              style: { top: "20%", right: "20%" },
+              float: [0, 15, 0],
+            },
+            {
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+              alt: "React",
+              style: { bottom: "15%", left: "20%" },
+              float: [0, 20, 0],
+            },
+            {
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+              alt: "Next.js",
+              style: { top: "50%", left: "50%", transform: "translate(-50%, -50%)" },
+              float: [0, -15, 0],
+            },
+            {
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+              alt: "Node.js",
+              style: { bottom: "20%", right: "25%" },
+              float: [0, 20, 0],
+            },
+            {
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+              alt: "Spring Boot",
+              style: { top: "65%", left: "10%" },
+              float: [0, -15, 0],
+            },
+            {
+              src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+              alt: "Docker",
+              style: { bottom: "10%", right: "10%" },
+              float: [0, 15, 0],
+            },
+          ].map((icon, index) => (
+            <motion.img
+              key={index}
+              src={icon.src}
+              alt={icon.alt}
+              className="w-12 h-12 grayscale contrast-200 drop-shadow-xl"
+              style={{ position: "absolute", ...icon.style }}
+              animate={{ y: icon.float }}
+              transition={{ duration: 4 + index, repeat: Infinity, ease: "easeInOut" }}
+            />
+          ))}
+
+          {/* Center Terminal Box */}
+          <motion.div
+            className="bg-black text-white border border-white shadow-xl p-4 rounded-md max-w-xs w-full text-sm font-mono z-10"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.5, duration: 1 }}
+          >
+            <div className="text-green-400 font-bold">_ Terminal</div>
+            <p className="text-white">npm run dev</p>
+            <p className="text-white">Starting development server...</p>
+            <p className="text-gray-400">✔ Compiled successfully!</p>
+          </motion.div>
         </motion.div>
+
       </div>
     </div>
   );
