@@ -9,7 +9,7 @@ import { TypeAnimation } from "react-type-animation";
 export default function Home() {
   return (
     <div className="min-h-screen" id="home">
-      {/* Navigation Bar */}
+      {/* Navigation Bar
       <header className="py-6 px-4 sm:px-10 lg:px-28 flex justify-between items-center">
         <div className="text-2xl font-bold">TR</div>
         <nav className="flex space-x-6">
@@ -28,7 +28,7 @@ export default function Home() {
             <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
           </svg>
         </a>
-      </header>
+      </header> */}
 
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center px-5 sm:px-10 lg:px-28 py-10 gap-10 max-w-screen-xl mx-auto">
         {/* Left Side */}
